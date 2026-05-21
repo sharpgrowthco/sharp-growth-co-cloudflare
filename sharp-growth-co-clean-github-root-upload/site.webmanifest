@@ -1,0 +1,22 @@
+{
+  "name": "Sharp Growth Co.",
+  "short_name": "Sharp Growth Co.",
+  "description": "Alberta marketing agency for website design, social media management, content creation, branding, and local business growth.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#2a2218",
+  "theme_color": "#b8945f",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

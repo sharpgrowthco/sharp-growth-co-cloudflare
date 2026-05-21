@@ -1,0 +1,170 @@
+/* Ready to Begin bottom banner image treatment */
+.ready-to-begin-image-banner {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: oklch(0.36 0.035 60) !important;
+}
+
+.ready-to-begin-image-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/assets/banner-bottom-with-text-ready-to-begin.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  filter: brightness(1.35) saturate(1.08);
+  transform: scale(1.01);
+}
+
+.ready-to-begin-image-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent;
+}
+
+.ready-to-begin-image-banner > *,
+.ready-to-begin-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.ready-to-begin-image-banner .section-label,
+.ready-to-begin-image-banner h2,
+.ready-to-begin-image-banner p {
+  text-shadow: none;
+}
+
+.ready-to-begin-image-banner .section-label {
+  color: oklch(0.985 0.008 85 / 0.86) !important;
+}
+
+.ready-to-begin-image-banner p {
+  color: oklch(0.985 0.008 85 / 0.9) !important;
+}
+
+.ready-to-begin-image-banner .btn-primary,
+.ready-to-begin-image-banner .btn-gold {
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .ready-to-begin-image-banner::before {
+    background-position: 62% bottom;
+    opacity: 0.7;
+  }
+
+  .ready-to-begin-image-banner::after {
+    background: transparent;
+  }
+}
+
+.ready-to-begin-injected-section {
+  padding: clamp(5rem, 8vw, 8rem) 0 !important;
+  text-align: center;
+}
+
+.ready-to-begin-injected-section .ready-to-begin-banner-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ready-to-begin-injected-section .section-label {
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ready-to-begin-injected-section h2 {
+  margin: 0 auto 1.25rem;
+  max-width: 760px;
+  color: oklch(0.985 0.008 85) !important;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.ready-to-begin-injected-section p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: clamp(0.92rem, 1.25vw, 1.05rem);
+  line-height: 1.65;
+}
+
+.ready-to-begin-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+.ready-to-begin-primary,
+.ready-to-begin-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.95rem 1.65rem;
+  border-radius: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.ready-to-begin-primary {
+  background: oklch(0.70 0.095 78) !important;
+  color: oklch(0.18 0.025 55) !important;
+  box-shadow: none;
+}
+
+.ready-to-begin-secondary {
+  border: 1px solid oklch(0.985 0.008 85 / 0.58) !important;
+  color: oklch(0.985 0.008 85) !important;
+  background: oklch(0.985 0.008 85 / 0.08) !important;
+  backdrop-filter: blur(6px);
+}
+
+.ready-to-begin-primary:hover,
+.ready-to-begin-secondary:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .ready-to-begin-actions {
+    flex-direction: column;
+  }
+
+  .ready-to-begin-primary,
+  .ready-to-begin-secondary {
+    width: 100%;
+    max-width: 22rem;
+  }
+}
+
+/* Ready to Begin duplicate cleanup: keep one intentional CTA section per page. */
+.sgc-ready-to-begin-duplicate-hidden,
+section.sgc-ready-to-begin-duplicate-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}

@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+  img[data-sgc-home-hero="true"],
+  .sgc-mobile-home-hero img[src*="homepage-hero-laptop"],
+  .sgc-mobile-home-hero img[src*="HomepageHero"],
+  .sgc-mobile-home-hero img[src*="laptop"] {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 58vh !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .sgc-mobile-home-hero {
+    overflow: visible !important;
+  }
+
+  .sgc-mobile-home-hero [class*="overflow-hidden"] {
+    overflow: visible !important;
+  }
+
+  .sgc-mobile-home-hero [class*="h-"] {
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  img[data-sgc-home-hero="true"],
+  .sgc-mobile-home-hero img[src*="homepage-hero-laptop"],
+  .sgc-mobile-home-hero img[src*="HomepageHero"],
+  .sgc-mobile-home-hero img[src*="laptop"] {
+    max-height: 52vh !important;
+  }
+}
