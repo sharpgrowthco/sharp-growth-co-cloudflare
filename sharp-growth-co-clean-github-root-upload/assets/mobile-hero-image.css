@@ -6,8 +6,8 @@
     width: 100% !important;
     height: auto !important;
     max-height: 58vh !important;
-    object-fit: contain !important;
-    object-position: center center !important;
+    object-fit: cover !important;
+    object-position: left center !important;
   }
 
   .sgc-mobile-home-hero {
@@ -21,6 +21,47 @@
   .sgc-mobile-home-hero [class*="h-"] {
     min-height: auto !important;
   }
+
+  header {
+    overflow: visible !important;
+  }
+
+  header .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  header a[href="/"].flex.flex-col,
+  header a[href="/"][class*="flex-col"] {
+    flex-shrink: 0 !important;
+    max-width: calc(100vw - 6.25rem) !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  header a[href="/"].flex.flex-col span,
+  header a[href="/"][class*="flex-col"] span {
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  header a[href="/"].flex.flex-col span:first-child,
+  header a[href="/"][class*="flex-col"] span:first-child {
+    font-size: clamp(1rem, 5vw, 1.18rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  header a[href="/"].flex.flex-col span:last-child,
+  header a[href="/"][class*="flex-col"] span:last-child {
+    font-size: clamp(0.42rem, 2.2vw, 0.52rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.14em !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -29,5 +70,16 @@
   .sgc-mobile-home-hero img[src*="HomepageHero"],
   .sgc-mobile-home-hero img[src*="laptop"] {
     max-height: 52vh !important;
+    object-position: left center !important;
+  }
+
+  header .container {
+    padding-left: 0.875rem !important;
+    padding-right: 0.875rem !important;
+  }
+
+  header a[href="/"].flex.flex-col,
+  header a[href="/"][class*="flex-col"] {
+    max-width: calc(100vw - 5.5rem) !important;
   }
 }

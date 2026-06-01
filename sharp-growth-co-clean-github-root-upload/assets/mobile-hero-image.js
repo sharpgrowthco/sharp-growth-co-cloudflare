@@ -12,8 +12,8 @@
     if (!heroImage) return;
 
     heroImage.dataset.sgcHomeHero = 'true';
-    heroImage.style.objectFit = window.innerWidth <= 767 ? 'contain' : '';
-    heroImage.style.objectPosition = window.innerWidth <= 767 ? 'center center' : '';
+    heroImage.style.objectFit = window.innerWidth <= 767 ? 'cover' : '';
+    heroImage.style.objectPosition = window.innerWidth <= 767 ? 'left center' : '';
 
     const section = heroImage.closest('section') || heroImage.parentElement;
     if (section) section.classList.add('sgc-mobile-home-hero');
